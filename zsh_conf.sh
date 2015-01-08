@@ -17,7 +17,7 @@ if [ -f "$HOME"/.zshrc ];then
     echo "backup .zshrc"
     mv "$HOME"/.zshrc "$HOME"/.zshrc_old
 fi
-cp ./.zshrc "HOME"
+cp ./.zshrc "$HOME"
 
 # $SHELL=/bin/zsh
 if [ "$SHELL" != "/bin/zsh" ];then
