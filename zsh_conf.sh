@@ -12,6 +12,13 @@ else
     echo "oh-my-zsh is already installed."
 fi
 
+# .zshrc
+if [ -f "$HOME"/.zshrc ];then
+    echo "backup .zshrc"
+    mv "$HOME"/.zshrc "$HOME"/.zshrc_old
+fi
+cp ./.zshrc "HOME"/.zshrc
+
 # $SHELL=/bin/zsh
 if [ "$SHELL" != "/bin/zsh" ];then
     echo "Change Shell to Zsh"
