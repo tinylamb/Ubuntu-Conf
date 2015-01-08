@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-git reset --hard
+# keep local edit and pull new repo
+git stash
 git pull
+git stash pop
