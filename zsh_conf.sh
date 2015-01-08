@@ -4,11 +4,15 @@
 sudo apt-get install zsh git wget curl
 
 # install oh-my-zsh
-oh_install=https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
-wget --no-check-certificate "$oh_install" -O - | sh
+if [ ! -d "$HOME"/.oh-my-zsh ];then
+    oh_install=https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh 
+    wget --no-check-certificate "$oh_install" -O - | sh
+fi
 
 # $SHELL=/bin/zsh
-chsh -s /bin/zsh
+if [ "$SHELL" != "/bin/bash" ];then
+    chsh -s /bin/zsh
+    sudo reboot
+fi
 
-sudo reboot
 
