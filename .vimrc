@@ -1,13 +1,8 @@
 "vundle setting
-if has('vim_starting')
-    set nocompatible
-    filetype off
-    set runtimepath+=~/.vim/bundle/vundle.vim
-endif
-"set nocompatible               " be iMproved
-"filetype off                   " required!
-"set rtp+=~/.vim/bundle/vundle.vim
-call vundle#begin('~/.vim/bundle')
+set nocompatible
+filetype off
+set runtimepath+=~/.vim/bundle/vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle,required! 
 Plugin 'gmarik/Vundle.vim'  
@@ -54,7 +49,6 @@ colorscheme desert
 set gfn=Ubuntu\ Mono\ 13
 set lines=36 columns=100
 winpos 246 73
-set transparency=3
 set showcmd
 set ignorecase
 set incsearch
